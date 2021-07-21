@@ -1,3 +1,14 @@
+:root {
+  --background: #172041;
+  --spending: #428dfc;
+  --income: #0ce381;
+  --white: #ffffff;
+  --selected: #7c83fd;
+
+  --bold: 600;
+  --bolder: 800;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

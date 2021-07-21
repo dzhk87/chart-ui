@@ -1,0 +1,77 @@
+.graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding: 1em 2em;
+
+  &__bars {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+  &__bar-w {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+  &__bar {
+    width: 1em;
+    border-radius: 1em;
+    margin: 0 3px;
+
+    &.income {
+      background-color: var(--income);
+    }
+    &.spending {
+      background-color: var(--spending);
+    }
+  }
+
+  &__labels {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 0.5em;
+  }
+
+  &__label {
+    cursor: pointer;
+    font-weight: var(--bold);
+    padding: 0.5em;
+
+    &.selected {
+      background-color: var(--white);
+      color: var(--selected);
+      font-weight: var(--bolder);
+      border-radius: 0.5em;
+    }
+  }
+
+  &__budget {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    transition: all 2s 0.3s ease-in-out;
+
+    &__label {
+      line-height: 1.4;
+      &.top {
+        font-size: 1.1em;
+      }
+      &.bottom {
+        font-size: 1.25em;
+        font-weight: var(--bolder);
+      }
+    }
+    &__line {
+      width: 100%;
+      color: var(--white);
+      margin: 0;
+    }
+  }
+}

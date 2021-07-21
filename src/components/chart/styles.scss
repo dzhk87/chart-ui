@@ -1,0 +1,55 @@
+.background {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 600px;
+  height: 400px;
+  padding: 3%;
+  background-color: var(--background);
+}
+
+.month {
+  flex-basis: 1em;
+  color: var(--white);
+  font-weight: var(--bolder);
+  padding: 1em;
+}
+
+.detail {
+  flex-basis: 2em;
+  display: flex;
+  padding: 1em;
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(n + 2) {
+    margin-left: 1.5em;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+  }
+  &__left {
+    width: 0.9em;
+    height: 0.9em;
+    flex-basis: auto;
+    border-radius: 50%;
+    &.spending {
+      background-color: var(--spending);
+    }
+    &.income {
+      background-color: var(--income);
+    }
+  }
+  &__label {
+    padding: 0 10px;
+
+    &.bold {
+      font-weight: var(--bold);
+    }
+  }
+}
